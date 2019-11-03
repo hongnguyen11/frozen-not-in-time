@@ -1,4 +1,65 @@
 html {
   font-family: "Fredoka One", sans-serif;
-  background-color: #b3fbff;
+  background-color: #c9fcff;
+}
+
+body {
+  background-image: repeating-linear-gradient(-45deg, #b3fbff, #c9fcff 20px, #d4fdff 10px);
+}
+
+h1 {
+  color: #990073;
+  transform: rotate(-5deg);
+}
+
+h2 {
+  color: #c09;
+  transform: rotate(-4deg);
+}
+
+p {
+  color: #c09;
+  max-width: 19em;
+}
+
+.btn-ghost {
+  border-color: #990073;
+}
+
+.text {
+  transform-origin: left-center;
+}
+
+.ice-cream {
+  position: relative;
+}
+
+.cone {
+  position: absolute;
+  bottom: -4em;
+  left:7em;
+}
+
+.mint {
+  position: absolute;
+  bottom: 3em;
+  left:7em;
+}
+
+.choco {
+  position: absolute;
+  bottom: 7em;
+  left:7em;
+}
+
+.vani {
+  position: absolute;
+  bottom: 10em;
+  left:7em;
+}
+
+.cherry {
+  position: absolute;
+  bottom: 15em;
+  left:7em;
 }
