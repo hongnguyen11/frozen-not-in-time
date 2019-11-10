@@ -1,54 +1,62 @@
 html {
-  box-sizing: border-box;
   font-family: "Fredoka One", sans-serif;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.banner {
+.banner-wrapper {
   background-color: #b3fbff;
   background-image: repeating-linear-gradient(-35deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
   position: relative;
   text-align: center;
+  max-height: 75vh;
 }
 
-
 .left-content {
-  animation: blur 400ms linear;
-  padding-left: 3em;
+  animation:
+    opacity .5s 1s linear forwards,
+    blur .5s 2.5s linear forwards;
+  padding-left: 2em;
+  opacity: 0;
+}
+
+@keyframes opacity {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }
 
 @keyframes blur {
+
   0% {
     filter: blur(14px);
   }
+
   100% {
     filter: blur(0);
   }
+
 }
 
 .banner-content h1 {
   color: #990073;
   transform: rotate(-7deg);
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
 }
 
 .banner-content h2 {
   color: #c09;
   transform: rotate(-5deg);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
   max-width: 19em;
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 p {
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
 }
 
 .btn-ghost {
@@ -58,47 +66,123 @@ p {
 }
 
 .btn-ghost:hover {
-  background-color: #c09 50%;
+  background-color: rgba(204, 0, 153, .5);
   border-color: #990073;
   color: #c09;
 }
 
+.ice-cream {
+  padding-right: 10em;
+}
+
 .cone {
   position: absolute;
-  bottom: 2%;
-  width: 150px
+  bottom: 100%;
+  width: 180px;
+  animation: drop-cone 300ms linear forwards;
+}
+
+@keyframes drop-cone {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 2%;
+  }
+
 }
 
 .mint {
   position: absolute;
-  bottom: 22%;
-  width: 150px;
+  bottom: 100%;
+  width: 180px;
+  animation: drop-mint 300ms 300ms linear forwards;
+}
+
+@keyframes drop-mint {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 22%;
+  }
+
 }
 
 .choco {
-  width: 150px;
+  width: 180px;
   position: absolute;
-  bottom: 39%;
+  bottom: 100%;
   z-index: 3;
+  animation: drop-choco 300ms 600ms linear forwards;
+}
+
+@keyframes drop-choco {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 39%;
+  }
+
 }
 
 .vani {
   position: absolute;
-  width: 150px;
-  bottom: 231px;
+  width: 180px;
+  bottom: 100%;
   z-index: 4;
+  animation: drop-vani 300ms 900ms linear forwards;
+}
+
+@keyframes drop-vani {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 55%;
+  }
+
 }
 
 .cherry {
   display: inline-block;
-  width: 150px;
+  width: 180px;
   position: absolute;
-  bottom: 70%;
+  bottom: 100%;
   z-index: 5;
+  animation: drop-cherry 300ms 1200ms linear forwards;
 }
 
-@keyframes drop {
-  0% {
+@keyframes drop-cherry {
 
+  0% {
+    bottom: 100%;
   }
+
+  100% {
+    bottom: 70%;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  .left-content {
+    padding-left: 10.5em;
+    padding-top: 1em;
+  }
+
+  .ice-cream {
+    padding-right: 21em;
+  }
+
 }
