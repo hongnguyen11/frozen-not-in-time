@@ -1,65 +1,104 @@
 html {
+  box-sizing: border-box;
   font-family: "Fredoka One", sans-serif;
-  background-color: #c9fcff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-  background-image: repeating-linear-gradient(-45deg, #b3fbff, #c9fcff 20px, #d4fdff 10px);
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+.banner {
+  background-color: #b3fbff;
+  background-image: repeating-linear-gradient(-35deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  position: relative;
+  text-align: center;
+}
+
+
+.left-content {
+  animation: blur 400ms linear;
+  padding-left: 3em;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(14px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+.banner-content h1 {
   color: #990073;
-  transform: rotate(-5deg);
+  transform: rotate(-7deg);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+.banner-content h2 {
   color: #c09;
-  transform: rotate(-4deg);
+  transform: rotate(-5deg);
+  max-width: 19em;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 p {
-  color: #c09;
-  max-width: 19em;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .btn-ghost {
+  color: #c09;
+  border-radius: 5px;
   border-color: #990073;
 }
 
-.text {
-  transform-origin: left-center;
-}
-
-.ice-cream {
-  position: relative;
+.btn-ghost:hover {
+  background-color: #c09 50%;
+  border-color: #990073;
+  color: #c09;
 }
 
 .cone {
   position: absolute;
-  bottom: -4em;
-  left:7em;
+  bottom: 2%;
+  width: 150px
 }
 
 .mint {
   position: absolute;
-  bottom: 3em;
-  left:7em;
+  bottom: 22%;
+  width: 150px;
 }
 
 .choco {
+  width: 150px;
   position: absolute;
-  bottom: 7em;
-  left:7em;
+  bottom: 39%;
+  z-index: 3;
 }
 
 .vani {
   position: absolute;
-  bottom: 10em;
-  left:7em;
+  width: 150px;
+  bottom: 231px;
+  z-index: 4;
 }
 
 .cherry {
+  display: inline-block;
+  width: 150px;
   position: absolute;
-  bottom: 15em;
-  left:7em;
+  bottom: 70%;
+  z-index: 5;
+}
+
+@keyframes drop {
+  0% {
+
+  }
 }
